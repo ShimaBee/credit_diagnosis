@@ -90,3 +90,6 @@ sw.*
 *.swp
 
 .editorconfig
+
+
+yarn.lock
