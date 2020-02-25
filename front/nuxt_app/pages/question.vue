@@ -8,18 +8,19 @@
             <v-progress-linear
               color="light-blue"
               height="20"
-              v-bind:value="progress_percentage"
               rounded
               striped
             ></v-progress-linear>
           </div>
-         
-            <div class="d-flex justify-center">
+
+           <div class="d-flex justify-center">
               <v-btn
                 width="230"
                 height="50"
                 rounded
                 class="cyan accent-2 mb-8"
+                to="/answer"
+                nuxt
               >choise</v-btn>   
             </div>
 
@@ -29,6 +30,8 @@
                 height="50"
                 rounded
                 class="cyan accent-2 mb-8"
+                to="/answer"
+                nuxt
               >choise</v-btn>   
             </div>
 
@@ -38,6 +41,8 @@
                 height="50"
                 rounded
                 class="cyan accent-2 mb-8"
+                to="/answer"
+                nuxt
               >choise</v-btn>   
             </div>
 
@@ -47,6 +52,7 @@
                 height="50"
                 rounded
                 class="cyan accent-2 mb-8"
+                v-on:click="sendData();"
               >choise</v-btn>   
             </div>
   
@@ -57,5 +63,24 @@
 </template>
 
 <script>
-export default {};
+import axios from "axios";
+
+export default {
+  data() {
+    return {
+      choices: [1, 2, 3, 4]
+    };
+  },
+  methods: {
+    sendData() {
+      axios
+      .post(`http://localhost:8080/answers`, {
+        choices: this.choices
+      })
+      .then(response => {
+        console.log(response.data)
+      });
+    }
+  }
+};
 </script>
