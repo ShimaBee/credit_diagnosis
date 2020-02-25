@@ -74,12 +74,12 @@ export default {
   methods: {
     sendData() {
       axios
-      .post(`http://localhost:8080/answers`, {
-        choices: this.choices
-      })
-      .then(response => {
-        console.log(response.data)
-      });
+        .post(`http://localhost:8080/answers`, {
+          choices: this.choices
+        })
+        .then(response => {
+          console.log(response.data);
+        });
     }
   }
 };
