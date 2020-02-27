@@ -1,0 +1,51 @@
+- id: 1
+  text: "年齢は？"
+  choices:
+    - "18 ~ 25"
+    - "26 ~ 29"
+    - "30 ~ 39"
+    - "40以上"
+  values:
+    - age: 0    
+    - age: 0.3   
+    - age: 0.7
+    - age: 1
+      
+- id: 2
+  text: "ポイントの貯まりやすさはお気になさいますか？"
+  choices:
+    - "とても気にする"
+    - "気にする"
+    - "あまり気にしない"
+    - "気にしない"
+  values:
+    - point: 0    
+    - point: 0.3   
+    - point: 0.7
+    - point: 1
+
+- id: 3
+  text: "ポイントの貯まりやすさはお気になさいますか？"
+  choices:
+    - "とても気にする"
+    - "気にする"
+    - "あまり気にしない"
+    - "気にしない"
+  values:
+    - mile: 0    
+    - mile: 0.3   
+    - mile: 0.7
+    - mile: 1
+
+- id: 4
+  text: "年会費はお気になさいますか？"
+  choices:
+    - "とても気にする"
+    - "気にする"
+    - "あまり気にしない"
+    - "気にしない"
+  values:
+    - annual_fee: 0    
+    - annual_fee: 0.3   
+    - annual_fee: 0.7
+    - annual_fee: 1
