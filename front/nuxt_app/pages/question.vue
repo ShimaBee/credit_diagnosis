@@ -8,6 +8,7 @@
             <v-progress-linear
               color="light-blue"
               height="20"
+              v-bind:value="progress_percentage"
               rounded
               striped
             ></v-progress-linear>
@@ -66,6 +67,8 @@ export default {
     // 問題の切り替え
     switchQuestions: function(index, choise) {
       let questions = this.$store.state.questions;
+      // progress_linerの表示変更
+      this.progress_percentage = ((this.count + 1) / questions.length) * 100;
       // ユーザの選択肢の保存
       this.choices.push(index);
       // countを上げて問題を切り替える
