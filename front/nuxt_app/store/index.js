@@ -7,8 +7,8 @@ export const state = () => {
 }
 
 export const mutations={
-    SET_QUESTION: function(state,questions) {
-        state.questions=questions;
+    SET_QUESTION: function(state,question) {
+        state.questions=question;
     }
 }
 
