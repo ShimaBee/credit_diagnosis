@@ -74,7 +74,14 @@ export default {
   computed: {
     questions(){
       let questions = this.$store.state.questions;
-      console.log(questions)
+      let question_text = [];
+      let question_choices = [];
+      for (var i = 0; i < questions.length; i++) {
+        question_text.push(questions[i].text);
+         question_choices.push(questions[i].choices);
+      }
+      return {question_text, question_choices}
+      // console.log(questions.text)
     }
   },
   methods: {
