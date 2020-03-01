@@ -3,7 +3,7 @@
     <v-content class="bg">
       <div class="d-flex justify-center mx-3">
         <v-card class="mt-12" width="95%">
-          <v-card-title class="d-flex justify-center pt-10">question_text</v-card-title>
+          <v-card-title class="d-flex justify-center pt-10">{{questions}}</v-card-title>
           <div class="mx-7 mb-8">
             <v-progress-linear
               color="light-blue"
@@ -71,6 +71,12 @@ export default {
       choices: [1, 2, 3, 4]
     };
   },
+  computed: {
+    questions(){
+      let questions = this.$store.state.questions;
+      console.log(questions)
+    }
+  },
   methods: {
     sendData() {
       axios
@@ -81,6 +87,9 @@ export default {
           console.log(response.data);
         });
     }
+  },
+  async mounted() {
+    this.$store.dispatch("fetchQuestion");
   }
 };
 </script>
