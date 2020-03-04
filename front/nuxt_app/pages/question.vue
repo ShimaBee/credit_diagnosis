@@ -50,7 +50,7 @@ export default {
     questions_text() {
       const questions = this.$store.state.questions;
       const question_text = [];
-      for (var i = 0; i < questions.length; i++) {
+      for (let i = 0; i < questions.length; i++) {
         question_text.push(questions[i].text);
       }
       return question_text;
@@ -59,7 +59,7 @@ export default {
     question_choices() {
       const questions = this.$store.state.questions;
       const question_choices = [];
-      for (var i = 0; i < questions.length; i++) {
+      for (let i = 0; i < questions.length; i++) {
         question_choices.push(questions[i].choices);
       }
       return question_choices;
@@ -68,7 +68,7 @@ export default {
   methods: {
     // 問題の切り替え
     switchQuestions: function(index, choise) {
-      let questions = this.$store.state.questions;
+      const questions = this.$store.state.questions;
       // progress_linerの表示変更
       this.progress_percentage = ((this.count + 1) / questions.length) * 100;
       // ユーザの選択肢の保存
