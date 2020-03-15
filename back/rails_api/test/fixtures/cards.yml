@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyString
+  image_path: MyString
+  public_site_url: MyString
+  age: 1.5
+  points: 1.5
+  miles: 1.5
+  annual_fee: 1.5
+
+two:
+  name: MyString
+  description: MyString
+  image_path: MyString
+  public_site_url: MyString
+  age: 1.5
+  points: 1.5
+  miles: 1.5
+  annual_fee: 1.5
