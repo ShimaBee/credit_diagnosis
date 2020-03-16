@@ -51,7 +51,7 @@ Card.create!(
     {
       name: "ドコカ",
       description: "ここにはカードの簡単な説明文が入る予定です。ここにはカードの簡単な説明文が入る予定です。ここにはカードの簡単な説明文が入る予定です。ここにはカードの簡単な説明文が入る予定です。",
-      image_path: "rakuka.jpg",
+      image_path: "dokoka.jpg",
       public_site_url: "https://kureka/rakuka.com",
       age: 0.5,
       points: 0.8,
@@ -101,7 +101,7 @@ Card.create!(
     {
       name: "オリゴール",
       description: "ここにはカードの簡単な説明文が入る予定です。ここにはカードの簡単な説明文が入る予定です。ここにはカードの簡単な説明文が入る予定です。ここにはカードの簡単な説明文が入る予定です。",
-      image_path: "origo-ru.jpg",
+      image_path: "origoru.jpg",
       public_site_url: "https://kureka/origo-ru.com",
       age: 0.7,
       points: 0.8,
@@ -111,7 +111,7 @@ Card.create!(
     {
       name: "ジェーゴール",
       description: "ここにはカードの簡単な説明文が入る予定です。ここにはカードの簡単な説明文が入る予定です。ここにはカードの簡単な説明文が入る予定です。ここにはカードの簡単な説明文が入る予定です。",
-      image_path: "je-go-ru.jpg",
+      image_path: "jegoru.jpg",
       public_site_url: "https://kureka/je-go-ru.com",
       age: 0.8,
       points: 0.5,
@@ -121,7 +121,7 @@ Card.create!(
     {
       name: "ミツゴール",
       description: "ここにはカードの簡単な説明文が入る予定です。ここにはカードの簡単な説明文が入る予定です。ここにはカードの簡単な説明文が入る予定です。ここにはカードの簡単な説明文が入る予定です。",
-      image_path: "mitugo-ru.jpg",
+      image_path: "mitugoru.jpg",
       public_site_url: "https://kureka/mitugo-ru.com",
       age: 0.8,
       points: 0.6,
