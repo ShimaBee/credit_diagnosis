@@ -17,6 +17,7 @@ class AnswersController < ApplicationController
     taste_values.each do |v|
       user_taste_values.push(v.values)
     end
+    
     # 配列の中に配列が入っている状態だったので、平坦にする。
     user_taste_values.flatten!
 

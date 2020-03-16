@@ -4,7 +4,8 @@ const axios = require('axios');
 // questionsというstateを定義
 export const state = () => {
     return {
-        questions: []
+        questions: [],
+        answer:[]
     }
 }
 
@@ -12,6 +13,9 @@ export const state = () => {
 export const mutations={
     SET_QUESTION: function(state,question) {
         state.questions=question;
+    },
+    SET_ANSWER: function(state,answer) {
+        state.answer=answer;
     }
 }
 
@@ -21,5 +25,8 @@ export const actions = {
         const url = 'http://localhost:8080/questions'
         const result = await axios.get(url);
         context.commit("SET_QUESTION", result.data)
+    },
+    async fetchAnswer(context,result) {
+        context.commit("SET_ANSWER", result)
     }
 }

@@ -2,48 +2,21 @@
   <v-app>
     <section>
       <v-container>
-
-       <div class="d-flex justify-center mx-3">
+       <div 
+         class="d-flex justify-center mx-3"
+         v-for="(card,index) in result" v-bind:key="index"
+         >
           <v-card class="mt-12" width="95%">
-            <v-card-title class="d-flex justify-center pt-10">cord name</v-card-title>
+            <v-card-title class="d-flex justify-center pt-10">{{card.name}}</v-card-title>
             <div class="image-wrapper d-flex justify-center">
-              <img :src="require(`../assets/images/cards/card_image.001.jpeg`)" alt class />
+              <!-- <img :src="require(`../assets/images/cards/${card.image_path}`)" alt class /> -->
             </div>
             <div class="description-wrapper ma-5">
-              <p>description: text text text text text texttext text 
-                texttext text texttext text texttext text texttext text text text text texttext text 
-                texttext text texttext text texttext text text</p>
+              <p>{{card.description}}</p>
             </div>
           </v-card>
         </div>
 
-        <div class="d-flex justify-center mx-3">
-          <v-card class="mt-12" width="95%">
-            <v-card-title class="d-flex justify-center pt-10">cord name</v-card-title>
-            <div class="image-wrapper d-flex justify-center">
-              <img :src="require(`../assets/images/cards/card_image.001.jpeg`)" alt class />
-            </div>
-            <div class="description-wrapper ma-5">
-              <p>description: text text text text text texttext text 
-                texttext text texttext text texttext text texttext text text text text texttext text 
-                texttext text texttext text texttext text text</p>
-            </div>
-          </v-card>
-        </div>
-
-       <div class="d-flex justify-center mx-3">
-          <v-card class="mt-12" width="95%">
-            <v-card-title class="d-flex justify-center pt-10">cord name</v-card-title>
-            <div class="image-wrapper d-flex justify-center">
-              <img :src="require(`../assets/images/cards/card_image.001.jpeg`)" alt class />
-            </div>
-            <div class="description-wrapper ma-5">
-              <p>description: text text text text text texttext text 
-                texttext text texttext text texttext text texttext text text text text texttext text 
-                texttext text texttext text texttext text text</p>
-            </div>
-          </v-card>
-        </div>
 
         <div class="mt-5 d-flex justify-center">
           <v-btn
@@ -59,3 +32,14 @@
     </section>
   </v-app>
 </template>
+
+<script>
+export default {
+  computed: {
+    result() {
+      const answer = this.$store.state.answer;
+      return answer;
+    }
+  }
+}
+</script>
