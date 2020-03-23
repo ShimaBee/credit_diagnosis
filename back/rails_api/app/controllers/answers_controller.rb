@@ -38,8 +38,6 @@ class AnswersController < ApplicationController
     render json: cards, status: 200
   end
 
-  public
-
   # 多次元配列において、それぞれの配列の総和を求め、少数第二位までの値の配列として返す。
   def arrays_sum(arr)
     arr.map{|v| v.sum.round(2)}
